@@ -7,7 +7,14 @@ namespace Lab04_TicTacToe
     {
         static void Main(string[] args)
         {
-            StartGame();
+            while (true)
+            {
+                StartGame();
+                Console.WriteLine("\nDo you want to play again ?? (y/n)");
+                string loop = Console.ReadLine();
+                if (loop == "n")
+                    Environment.Exit(0);
+            }
         }
 
         static void StartGame()
